@@ -18,8 +18,3 @@ Click the "Reload" button to generate a new map ( or press F5 on your keyboard )
 
 Demo: https://jefflong72.github.io
 
-Known Bugs ( random effect, doesnt always happen ):
- - Non-player icons may load in the same space as tree icons.
- - Non-player icons may not initially appear on the board ( they go ninja onload but appear on their turn ).  
- 
- Both of the bugs listed above may randomly happen during the icon loading stage and are next on my todo list.
