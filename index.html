@@ -1,0 +1,43 @@
+<html>
+<title>Simple Javascript/jQuery RPG Game</title>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<h1>Simple Javascript/jQuery RPG Game</h1>
+
+Info: <span id="notice"></span>
+
+<div class="board-container">
+	<div class="map"></div>
+	<div class="table"></div>
+</div>
+
+<p>
+Turn: <select name="players" id="players">
+		<option value="">-- Select Player --</option>
+		<option value="p1">Player 1</option>
+		<option value="p2">Player 2</option>
+		<option value="p3">Player 3</option>
+		<option value="p4">Player 4</option>
+	</select>
+Target Cell: <input type="text" id="target" style="width:40px;">		
+	<button id="move_players">Move Player</button>		
+Threat: <select name="threat" id="threat">
+		<option value="">-- Select Player --</option>
+		<option value="p1">Player 1</option>
+		<option value="p2">Player 2</option>
+		<option value="p3">Player 3</option>
+		<option value="p4">Player 4</option>
+	</select>
+	<button id="move_icons">Move Icons</button>
+	<button id="restart">Reload</button>
+</p>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/move.class.js"></script>
+<script src="js/functions.js"></script>
+
+</body>
+</html>

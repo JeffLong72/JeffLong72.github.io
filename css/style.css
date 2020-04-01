@@ -1,0 +1,89 @@
+table, th, td {
+  /* border:1px solid #98e698; */
+}
+.board-container {
+	position: relative;
+}
+.map, 
+.table {
+	position: absolute;
+	top: 55px;
+	left: 0;
+}	
+.map td {
+	height: 50px;
+	width: 50px;
+	background-color: #98FB98;
+	border: 1px solid #98e698; /* #98e698 */	
+}	
+.table td {
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	border: 1px solid #98e698; /* #98e698 */
+}
+
+.icon0 {
+	background-color:blue !important;
+}
+.icon1 {
+	background-color:orange !important;	
+}
+.icon2 {
+	background-color:red !important;	
+}
+.icon0, 
+.icon1, 
+.icon2 {
+	border-radius: 25px;
+}	
+
+.tree {
+	background: url('../images/tree.png');
+}
+
+.p1 {
+	background: url('../images/p1.png');
+}
+.p2 {
+	background: url('../images/p2.png');
+}
+.p3 {	
+	background: url('../images/p3.png');
+}
+.p4 {
+	background: url('../images/p4.png');	
+}
+.p1, 
+.p2, 
+.p3, 
+.p4 {
+	background-size: 50px 48px;
+}
+
+.octagon {
+    width:48px;
+    height:48px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.inner {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    background: #fff;
+    border: 2px solid #f5f5f5;
+	opacity:0.2;
+}
+.inner:before {
+    position: absolute;
+    top: -2px; 
+	right: -2px; 
+	bottom: -2px; 
+	left: -2px;
+    transform: rotate(45deg);
+    content: '';
+    border: inherit;
+}
