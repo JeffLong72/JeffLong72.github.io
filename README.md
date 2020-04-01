@@ -1,6 +1,6 @@
 # JeffLong72.github.io
 
-Purpose: An on-going RPG game thats being developed using Javascript/jQuery ( future development will include PHP and MySQL database ).
+Introduction: An on-going RPG game thats being developed using Javascript/jQuery ( future development will include PHP and MySQL database ).
 
 To test the game in its current state, 
 
@@ -14,4 +14,4 @@ To test the game in its current state,
 
 Note: Tree icons are blocked locations that all icons will navigate around.
 
-# Demo: https://jefflong72.github.io
+Demo: https://jefflong72.github.io
