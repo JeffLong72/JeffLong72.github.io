@@ -4,7 +4,7 @@ Introduction: A real-time turn-based multi-player online RPG board game thats cu
 
 To test the game in its current state ( the game engine movement feature only ), 
 
-1) Click the "Turn" drop down list and select "Player 1". A highlighted area will appear on the board to show the valid locations the Player 1 icon is permitted to move too. Click on any cell within the hightlighted spaces then click the button "Move Player" to automatically move the player to your desired location.
+1) Click the "Turn" drop down list and select "Player 1". A highlighted area will appear on the board to show the valid locations the Player 1 icon is permitted to move too. Click on any cell within the highlighted spaces then click the button "Move Player" to automatically move the player to your desired location.
  - Optional: Repeat above for Player 2
  
 2) Click the button "Move Icons", 
