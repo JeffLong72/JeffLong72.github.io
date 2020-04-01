@@ -1,4 +1,4 @@
-# RPG Board Game 
+# Online RPG Board Game 
 
 Introduction: A real-time turn-based multi-player RPG board game thats currently being developed using Javascript/jQuery ( future development will include PHP, Websockets and MySQL database for data storage ).
 
