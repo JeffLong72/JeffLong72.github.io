@@ -5,6 +5,7 @@ $( document ).ready(function() {
 	var max_x = 15; // horizontal
 	var obstructions = 10; // obstacles
 	var icon_movement_range = 4;
+	var rand_pos = []; // set randon position array
 	
 	// icons array
 	// ( add iconX to array to create more AI icons )
@@ -32,29 +33,58 @@ $( document ).ready(function() {
 		content += '</tr>';
 	}
 	content += "</table>";
-	$('.table').append(content);	
+	$('.table').append(content);
+
+	// set position of icon using random empty cell
+	function create_random_position () {
+		
+		var rand_y = Math.floor(Math.random() * (max_y-2)) + 1;
+		var rand_x = Math.floor(Math.random() * (max_x-2)) + 1;
+		var pos = rand_y + "-" + rand_x;
+		
+		if(rand_pos.indexOf(pos) === -1) {			
+			rand_pos.push(pos);
+			return [rand_y, rand_x];
+		}
+	}	
 	
 	// set board icons 
 	function set_board_icons () {
-		for(var i = 0; i < obstructions; i++){ // add obstructions to board
-			var block_y = Math.floor(Math.random() * (max_y-2)) + 1;
-			var block_x = Math.floor(Math.random() * (max_x-2)) + 1;
-			if ( ! $('#' + block_y + "-" + block_x).hasClass( "blocked" ) ) {
-				$('#' + block_y + "-" + block_x).addClass('tree').addClass('blocked');
-			}
-		}		
-		for(var i = 0; i < icons.length; i++) { // add icons to board
-			var rand_y = Math.floor(Math.random() * (max_y-2)) + 1;
-			var rand_x = Math.floor(Math.random() * (max_x-2)) + 1;
-			$('#'+rand_y+'-'+rand_x).addClass(icons[i]).addClass('blocked');
-			window["icon"+i] = new Move ( max_y, max_x, rand_y, rand_x, icons[i]);
-		}
-
-		// add player to board
+				
+		// add player 1 to board
 		$('#1-1').addClass('p1').addClass('blocked').addClass('player');
 		window["p1"] = new Move ( max_y, max_x, 1, 1, 'p1');
+		rand_pos.push("1-1");
+		
+		// add player 2 to board
 		$('#8-8').addClass('p2').addClass('blocked').addClass('player');
 		window["p2"] = new Move ( max_y, max_x, 8, 8, 'p2');
+		rand_pos.push("8-8");
+		
+		// add icons to board
+		for(var i = 0; i < icons.length; i++) { // add icons to board
+			while (true) {
+				var pos = create_random_position ();
+				if (pos) {            
+					break;
+				} 
+			}
+			$('#' + pos[0] + "-" + pos[1]).addClass(icons[i]).addClass('blocked');
+			window["icon"+i] = new Move ( max_y, max_x, pos[0], pos[1], icons[i]);
+		}
+		
+		// add obstructions to board
+		for(var i = 0; i < obstructions; i++){ // add obstructions to board
+			while (true) {
+				var pos = create_random_position ();
+				if (pos) {            
+					break;
+				} 
+			}
+			if ( ! $('#' + pos[0] + "-" + pos[1]).hasClass( "blocked" ) ) {
+				$('#' + pos[0] + "-" + pos[1]).addClass('tree').addClass('blocked');
+			}
+		}
 		
 	} set_board_icons ();
 
