@@ -1,6 +1,6 @@
 # Turn Based Board Game (Javascript/jQuery)
 
-Introduction: A turn-based board game using Javascript/jQuery. This code is for educational purposes only as future development will include PHP Websockets for multiplayer and MySQL database for data storage. It's a long road but every path always starts somewhere...
+Introduction: A turn-based board game using Javascript/jQuery. This code is for educational purposes only as future development will include PHP Websockets for multiplayer and MySQL database for data storage.
 
 To test the game basic movement feature, 
 
