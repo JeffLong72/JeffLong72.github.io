@@ -8,7 +8,7 @@ To test the game basic movement feature,
  - Optional: Repeat above for Player 2
  
 2) Click the button "Move Icons", 
- - Each icon will automatically take a turn to move to the location of the closest player within their movement range.
+ - Each icon will automatically take its turn and move to the location of the closest player within their movement range.
  - Where no player icon is within the icons movement range, or the icon is not already next to a player icon, the icon will skip its turn ( no action will be taken ).
  - Optional: Click the "Threat" drop down list and select a Player, all non-player icons will then automatically move towards that player icon on their turn ( instead of moving towards the closest player icon which is the default action ).
 
